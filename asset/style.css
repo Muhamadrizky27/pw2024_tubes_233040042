@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+
+* {
+  font-family: 'Poppins';
+  font-weight: 600;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.napbar {
+  background-color: #007e15;
+}
+
+.container-home {
+  background-image: url(../img/tumb.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  box-shadow: 0px 0px 70px 100px rgba(0, 0, 0, 0.5) inset;
+}
+
+.bi-shop-window,
+.ri-shopping-cart-line {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+
+
+.home-text {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-text h2 {
+  font-size: 50px;
+  font-family: 'Delicious Handrawn', cursive;
+}
+
+.home-text h2 span {
+  color: rgb(0, 255, 0);
+  font-family: 'Delicious Handrawn', cursive;
+}
+
+.cart i {
+  color:  rgb(255, 255, 255);
+}
+
+.btn1 {
+  width: 100px;
+}
+
+.content-about {
+  width: 50%;
+}
+
+#about img {
+  width: 550px;
+  height: 300px;
+}
+
+#gallery img {
+  width: 450px;
+  height: 350px;
+}
+
+#contact .maps {
+  width: 600px;
+  height: 400px;
+  margin-left: 20px;
+}
+
+#contact .content-form {
+  width: 50%;
+}
+
+#product .card:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+
+
+@media screen and (max-width:600px) {
+  .container-home {
+    background-position: center;
+    height: 400px;
+  }
+
+  .home-text h2 {
+    font-size: 20px;
+  }
+
+  .btn1 {
+    width: 100px;
+  }
+
+  .content-about {
+    width: 100%;
+  }
+
+  #about img {
+    width: 100%;
+    height: 300px;
+  }
+
+  #gallery img {
+    width: 100%;
+    height: 220px;
+  }
+
+  #contact .maps {
+    width: 350px;
+    height: 300px;
+    margin-left: 20px;
+  }
+
+  #contact .content-form {
+    width: 100%;
+  }
+}
