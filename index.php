@@ -81,7 +81,7 @@ $result = $koneksi->query($sql);
     <section id="about" class="pt-5">
       <div class="container py-5 pt-5">
         <div data-aos="fade-up" class="d-flex flex-column flex-md-row justify-content-center gap-5">
-          <img src="img/medicinalplants.jpg" class="rounded-3">
+          <img src="img/medicinalplants.jpg" style="border: 5px solid brown ; padding: 10px" class="rounded-3">
           <div data-aos="fade-up"  class="content-about">
             <h2 class="text-center">Tentang Kami</h2>
             <p>Sebelum terciptanya manusia di permukaan bumi, telah diciptakan alam sekitarnya dan isinya sehingga mulai dari sejak manusia mulai ada dan mulai mencoba memanfaatkan alam sekitarnya untuk memenuhi keperluan sosial dan pribadi maka alam menyediakan kebutuhan bagi kehidupannya adalah kehidupan dan sumber kehidupannya, termasuk keperluan obat-obatan untuk mengatasi masalah-masalah kesehatan. Kenyataan menunjukkan bahwa dengan bantuan obat-obatan asal bahan alam tersebut, masyarakat dapat mengatasi masalah-masalah kesehatan yang dihadapinya. Hal ini menunjukkan bahwa obat yang berasal dari sumber bahan alam khususnya tanaman telah memperlihatkan peranannya dalam penyelenggaraan upaya-upaya kesehatan masyarakat dan makin diteliti tnaman obat yang merupakan segala jenis tumbuh-tumbuhan yang mempunyai khasiat atau kegunaan sebagai obat.</p>
@@ -119,13 +119,13 @@ $result = $koneksi->query($sql);
     <!-- Gallery -->
     <section id="gallery" class="py-5 py-md-5">
       <div data-aos="fade-up" class="text-center mb-5 pt-5">
-        <h1>Gallery</h1>
+        <h1>Herbal medicine gallery</h1>
       </div>
       <div class="container">
         <div data-aos="fade-up" class="d-flex flex-wrap gap-3 justify-content-center">
-          <img src="img/geserkanan.jpg" alt="" alt=""/>
+          <img src="img/goz1.jpg" style="border: 5px solid black; padding: 10px"/>
 
-          <img src="img/geserkiri.jpg" alt="" alt=""/>
+          <img src="img/goz2.jpg" style="border: 5px solid black; padding: 10px"/>
 
         </div>
       </div>
