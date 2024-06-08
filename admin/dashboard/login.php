@@ -1,13 +1,13 @@
 <?php
 session_start();
-include 'config.php';
+include '../../config.php';
 $error = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
     // Query ke database untuk mencari user dengan username yang diberikan
-    $query = "SELECT password FROM user WHERE username = ?";
+    $query = "SELECT password FROM admin WHERE username = ?";
     $stmt = mysqli_prepare($koneksi, $query);
     mysqli_stmt_bind_param($stmt, "s", $username);
     mysqli_stmt_execute($stmt);
@@ -20,8 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($password, $password_user)) {
             // Setel sesi sebagai user
             $_SESSION['username'] = $username;
-
-            header("Location: index.php");
+            $_SESSION['role'] = 'admin';
+            header("Location: dasboard.php");
             exit();
         } else {
             $error = 'Username atau password salah!';
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="icon" href="img/icon.ico" type="image/x-icon">
+<link rel="icon" href="../../img/icon.ico" type="image/x-icon">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200; 1.300;1.400;1.500;1.600;1.700;1.800;1.900&display=swap'); 
   body {
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url(./img/bege.jpg);
+    background-image: url(../../img/bege.jpg);
     background-position: center;
     background-size: cover;
     display: flex;
@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     max-width: 500px;
     text-align: center;
     margin: 1% auto;
-    background-color: rgb(3 37 7 / 60%);
+    background-color:rgb(3 37 7 / 60%);
     backdrop-filter: blur(1px);
     background-size: cover;
     background-position: center;
@@ -153,7 +153,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="form container-fluid">
         <form method="post">
             <div class="form_place container-lg" style="margin: 1% auto; width: 90%; padding: 1%;">
-                <h1>Login User</h1>
+                <h1>Login Admin</h1>
                 <?php if ($error): ?>
                     <p style="color: red; text-align: center;"><?php echo $error; ?></p>
                 <?php endif; ?>
@@ -163,9 +163,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="password" id="password" name="password" style="text-align: center; width: 60%; margin: 0 auto;" required>
                 <div style="display: flex; justify-content: space-evenly; flex-wrap: wrap; flex-direction: row; margin: 10px auto; gap: 10px;">
                 <input type="submit" value="Login" class="btn btn-success" style="font-size: larger; width: fit-content;">
-                <a href="index.php" class="btn btn-primary" style="font-size: larger; width: fit-content; place-content: center;">Home</a>
-                <a href="register.php" class="btn btn-primary" style="font-size: larger; width: fit-content; place-content: center;">Daftar</a>
-                <a href="./admin/dashboard/dasboard.php" class="btn btn-primary" style="font-size: larger; width: fit-content; place-content: center;">admin</a>
+                <a href="../../index.php" class="btn btn-primary" style="font-size: larger; width: fit-content; place-content: center;">Home</a>               
                 </div>
                 
             </div>

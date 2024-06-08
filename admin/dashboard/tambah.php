@@ -20,7 +20,7 @@ echo '<pre>';
 if (move_uploaded_file($_FILES['gambar']['tmp_name'], $uploadfile)) {
     echo "
     <script>
-    alert('data berhasil dihapus!');
+    alert('data berhasil ditambah!');
     document.location.href = 'dasboard.php';
     </script>
     ";

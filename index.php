@@ -16,7 +16,7 @@ $result = $koneksi->query($sql);
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MedikaObat.com</title>
+    <title>GreenMedicines</title>
     <link rel="stylesheet" href="asset/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.css" integrity="sha512-ZH3KB6wI5ADHaLaez5ynrzxR6lAswuNfhlXdcdhxsvOUghvf02zU1dAsOC6JrBTWbkE1WNDNs5Dcfz493fDMhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -67,8 +67,8 @@ $result = $koneksi->query($sql);
       <div class="container-home">
         <div class="home-text">
           <h5>WELCOME TO</h5>
-          <h2>Medika<span>Obat</span></h2>
-          <hr class="w-25 mx-auto border border-2 border-warning opacity-100" >
+          <h2>Green<span>Medicines</span></h2>
+          <hr class="w-25 mx-auto border border-2 border-light opacity-100" >
           
 
           </a>
@@ -81,7 +81,7 @@ $result = $koneksi->query($sql);
     <section id="about" class="pt-5">
       <div class="container py-5 pt-5">
         <div data-aos="fade-up" class="d-flex flex-column flex-md-row justify-content-center gap-5">
-          <img src="img/medicinalplants.jpg" style="border: 5px solid brown ; padding: 10px" class="rounded-3">
+          <img src="img/medicinalplants.jpg" style="border: 5px solid #f7f7f7" class="rounded-3">
           <div data-aos="fade-up"  class="content-about">
             <h2 class="text-center">Tentang Kami</h2>
             <p>Sebelum terciptanya manusia di permukaan bumi, telah diciptakan alam sekitarnya dan isinya sehingga mulai dari sejak manusia mulai ada dan mulai mencoba memanfaatkan alam sekitarnya untuk memenuhi keperluan sosial dan pribadi maka alam menyediakan kebutuhan bagi kehidupannya adalah kehidupan dan sumber kehidupannya, termasuk keperluan obat-obatan untuk mengatasi masalah-masalah kesehatan. Kenyataan menunjukkan bahwa dengan bantuan obat-obatan asal bahan alam tersebut, masyarakat dapat mengatasi masalah-masalah kesehatan yang dihadapinya. Hal ini menunjukkan bahwa obat yang berasal dari sumber bahan alam khususnya tanaman telah memperlihatkan peranannya dalam penyelenggaraan upaya-upaya kesehatan masyarakat dan makin diteliti tnaman obat yang merupakan segala jenis tumbuh-tumbuhan yang mempunyai khasiat atau kegunaan sebagai obat.</p>
@@ -102,9 +102,10 @@ $result = $koneksi->query($sql);
                     echo '<div data-aos="fade-up" class="card p-2" style="width: 18rem;">';
                     echo '<img src="./img/' . $row["gambar"] . '" class="card-img-top" width="100" height="200">';
                     echo '<div>';
-                    echo '<h6 class="py-2 text-dark">' . $row["nama"] . '</h6>';
+                    echo '<h6 class="py-2 text-dark" style="text-align: center;">' . $row["nama"] . '</h6>';
                     echo '<div class="d-flex justify-content-around">';
-                    // echo '<p style="color:black;">' . $row["deskripsi"] . '</p>';
+                    // echo '<p class="description" style="color:black;">' . $row["deskripsi"] . '</p>';
+                    echo '<a target="_blank" href="'. $row["url"] .'" style="color:black;" class="btn btn-outline-success">Selengkapnya</a>';
                     echo '</div>';
                     echo '</div>';
                     echo '</div>';
@@ -119,7 +120,7 @@ $result = $koneksi->query($sql);
     <!-- Gallery -->
     <section id="gallery" class="py-5 py-md-5">
       <div data-aos="fade-up" class="text-center mb-5 pt-5">
-        <h1>Herbal medicine gallery</h1>
+        <h1>Gallery</h1>
       </div>
       <div class="container">
         <div data-aos="fade-up" class="d-flex flex-wrap gap-3 justify-content-center">
@@ -169,7 +170,7 @@ $result = $koneksi->query($sql);
           <li class="nav-item"><a href="#gallery" class="nav-link px-2 text-body-secondary">Gallery</a></li>
           <li class="nav-item"><a href="#contact" class="nav-link px-2 text-body-secondary">Contact Me</a></li>
         </ul>
-        <p class="text-center text-body-secondary">&copy; Medika Obat</p>
+        <p class="text-center text-body-secondary">&copy; Green Medicines</p>
       </footer>
     </div>
     
