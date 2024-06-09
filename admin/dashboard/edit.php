@@ -40,11 +40,17 @@ $koneksi->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="icon" href="../../img/icon.ico" type="image/x-icon">
+
 
     <title>Edit Data</title>
 </head>
+
+>
+
+
 <body>
-    <div class="container-fluid container-sm" >
+    <div class="container-fluid container-sm form"  >
 
         <h2 style="text-align: center;">Edit Data</h2>
         <form method="post">

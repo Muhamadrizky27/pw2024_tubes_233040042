@@ -1,11 +1,12 @@
 <?php 
 include("../../config.php");
 $nama = $_POST['nama'];
+$admin_id = $_POST['admin_id'];
 $url = $_POST['url'];
 $deskripsi = $_POST['deskripsi'];
 $gambar = $_FILES['gambar']['name'];
 
-$sql = "INSERT INTO obatherbal ( nama, gambar, deskripsi, url) VALUES ( '$nama', '$gambar', '$deskripsi', '$url')";
+$sql = "INSERT INTO obatherbal ( nama, gambar, deskripsi, url, admin_id) VALUES ( '$nama', '$gambar', '$deskripsi', '$url', '$admin_id')";
 
 if ($koneksi->query($sql) === TRUE) {
     echo "Data baru berhasil ditambahkan";
