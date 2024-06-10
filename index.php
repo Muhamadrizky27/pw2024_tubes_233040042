@@ -131,35 +131,7 @@ $result = $koneksi->query($sql);
         </div>
       </div>
     </section>
-    <!-- CONTACT -->
-    <section id="contact" class="py-5  w-100">
-      <div data-aos="fade-up" class="text-center mb-5 pt-5">
-        <h1>Contact Me</h1>
-      </div>
-      <div class="d-flex flex-column flex-md-row justify-content-center align-items-center w-100">
-        <div class="content-form mx-auto px-3 px-md-0 container-contact">
-          <form>
-            <div class="mb-3">
-              <label for="nama" class="form-label">Nama Lengkap</label>
-              <input type="text" class="form-control" id="nama">
-              
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              
-            </div>
-            <div class="mb-3">
-              <label for="pesan" class="form-label">Message</label>
-              <textarea name="" class="form-control" cols="3" rows="4"></textarea>
-            </div>
-          
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-        </div>
-      </div>
-
-    </section>
+    
 
     <div class="container">
       <footer class="py-3 my-4">
@@ -168,7 +140,6 @@ $result = $koneksi->query($sql);
           <li class="nav-item"><a href="#about" class="nav-link px-2 text-body-secondary">Tentang Kami</a></li>
           <li class="nav-item"><a href="#product" class="nav-link px-2 text-body-secondary">Product</a></li>
           <li class="nav-item"><a href="#gallery" class="nav-link px-2 text-body-secondary">Gallery</a></li>
-          <li class="nav-item"><a href="#contact" class="nav-link px-2 text-body-secondary">Contact Me</a></li>
         </ul>
         <p class="text-center text-body-secondary">&copy; Green Medicines</p>
       </footer>

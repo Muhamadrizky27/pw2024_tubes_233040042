@@ -18,7 +18,6 @@ define('BASE_URL', 'http://localhost/pw2024_tubes_233040042/');
             <a class="nav-link" href="<?php echo BASE_URL; ?>index.php#about">About</a>
             <a class="nav-link" href="<?php echo BASE_URL; ?>index.php#product">Product</a>
             <a class="nav-link" href="<?php echo BASE_URL; ?>index.php#gallery">Gallery</a>
-            <a class="nav-link" href="<?php echo BASE_URL; ?>index.php#contact">Contact</a>
             <?php if ($role == 'admin'): ?>
                 <a class="nav-link" href="<?php echo BASE_URL; ?>/admin/dashboard/dasboard.php">Dashboard</a>
             <?php endif; ?>
